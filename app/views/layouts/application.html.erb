@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Depot</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="../">Depot</a>
+      <div class="nav-collapse">
+        
+        <ul class="nav nav-pills">
+          <li><a href="#aboutme">AboutMe</a></li>
+          <li><a href="#link">Link</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3 well">
+	  <table class="table table-bordered table-spriped">
+		<thead>
+		  <tr>
+			  <th><h3>Menu</h3></th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td><a href="/">Top</a></td>
+		  </tr>
+		  <tr>
+			<td><a href="./products">Products</a></td>
+		  </tr>
+		</tbody>
+	  </table>
+    </div>
+	<div class="span8 well">
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

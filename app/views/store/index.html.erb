@@ -1,0 +1,21 @@
+<h2>Progratic Catalog</h2>
+<% @products.each do |product| %>
+  <table class="table table-bordered table-striped">
+    <thead>
+	  <tr>
+	    <th>image</th>
+	    <th>title</th>
+	    <th>description</th>
+	    <th>price</th>
+	  </tr>
+    </thead>
+    <tbody>
+	  <tr>
+		<td><%= image_tag(product.image_url) %></td>
+		<td><%= product.title%></td>
+		<td><%= sanitize(product.description) %></td>
+		<td><%= number_to_currency(product.price) %></td>
+	  </tr>
+    </tbody>
+  </table>
+<% end %>
